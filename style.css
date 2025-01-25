@@ -107,6 +107,7 @@ a {
 
 .links li a:hover {
     color: var(--primaryColor);
+    text-decoration: underline;
 }
 
 .social-media-icons {
@@ -173,31 +174,45 @@ a {
 Body
 ==========
 */
-
-section {
-   margin-left: 10rem;
-    margin-top: 3rem;
-    min-height: 95vh;
-}
-
 .hero {
-  position: relative;
-  top: 5rem;
+  padding: 8rem 0;
 }
 
-.hero .text {
-  max-width: 50%; 
+.hero .text-img {
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+}
+.img-info {
+    flex-basis: 35%;
+}
+
+.img-info img {
+    width: 100%;
+    border-radius: 1rem;
+    
+}
+
+.text-button {
+    flex-basis: 60%;
+    margin-left: 3rem;
+    padding: 2rem;
+    
 }
 .hero h1 {
     font-size: 3rem;
     letter-spacing: 0.1rem;
+}
+
+.hero h1 .highlight {
+    color: rgb(236, 204, 204);
 }
 .hero h2 {
     font-size: 2rem;
     color:  rgb(236, 204, 204);
 }
 
-.hero article p {
+.hero p {
   line-height: 1.6; 
 }
 
@@ -222,19 +237,70 @@ section {
     color: white;
     background-color: #081B29;
 }
-.hero .img {
-  max-width: 40%; 
-  position: absolute;
-   right: 2rem;
-   top: 0;
-   bottom: 0;
-   display: flex;
-  
+
+
+@media (min-width: 76.8rem) {
+    .img-info img {
+    width: 85%;
+    
+}
 }
 
-.hero .img img {
-  width: 100%; 
-  height: auto;
 
- 
+
+/*
+==========================
+About
+==========================
+*/
+.about {
+    padding: 8rem 0;
+    color: #fff;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 1.3rem;
+}
+.maim-title {
+    font-size: 7rem;
+
+}
+.sub-title {
+    display: flex;
+    margin: 2rem 0 4rem;
+}
+
+.title {
+    margin-right: 5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+.title::after {
+    content: '';
+    width: 0;
+    height: 0.3rem;
+    background-color: rgb(236, 204, 204);
+    position: absolute;
+    left: 0;
+    bottom: -0.8rem;
+    transition: all 0.4s;
+}
+.title.active-title::after{
+    width: 50%;
 }
