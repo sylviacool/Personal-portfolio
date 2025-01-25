@@ -7,7 +7,7 @@ Variables
 */
 :root{
 --primaryColor:#b17979;
---mainBlack: #000;
+--mainBlack: #081B29;
 --greyBlack: #333;
 --mainTransition: all 0.3s ease out;
 --mainSpacing: 0.4rem;
@@ -29,9 +29,11 @@ Global Styles
 
 body {
     font-family: 'Poppins', sans-serif;
-    color:var(--mainBlack);
-    background: var(--primaryColor);
+    color:white;
+    background-color: var(--mainBlack);
     line-height: 1.5;
+
+  
 }
 
 /*
@@ -44,13 +46,13 @@ Nav Header
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: o.5rem;
+    padding: 0.5rem;
     box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
 
-    position: fixed;
-    top: 0;
-     left: 0;
-     right: 0;
+    
+
+    
+     
 
      background-color: rgb(236, 204, 204);
      border-bottom-width:0.1rem ;
@@ -92,7 +94,7 @@ a {
     text-decoration: none;
 }
 
-.links,.social-media-icons {
+.links, .social-media-icons {
     list-style: none;
 }
 
@@ -107,31 +109,54 @@ a {
     color: var(--primaryColor);
 }
 
-.links {
+.social-media-icons {
+   display: none;
+   font-size: 2.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--greyBlack);
+    transition: color 0.3s ease;
+    
+}
+.social-media-icons: :hover {
+     color: var(--primaryColor);
+}
+
+@media (max-width: 76.7rem) {
+    .links, .social-media-icons {
     height: 0;
     overflow: hidden;
     transition: all 0.3s ease-out;
     
 }
-
-.display-links {
-    height: 10rem; 
+.display-links{
+    height: auto; 
 }
 
 .social-media-icons {
-   display: none;
+    display: block;
 }
 
-@media (min-width: 76.8rem) {
+.nav-toggle {
+    margin-right:2rem ;
+    padding: auto;
+}
+}
+
+@media (min-width: 76.8rem)  {
     .social-media-icons {
         display: flex;
-        gap: 1.6rem;
-        margin-right: 3rem;
+        justify-content: flex-start; 
+        margin-left: auto; 
+        margin-right: 2rem;  
         font-size: 2rem;
-        padding: 1.2rem;
+        gap: 1rem;  
     }
 
-    .links {
+    .links{
+        margin-left: auto;
+    }
+
+    .links, .social-media-icons {
         height: auto;
         display: flex;
         gap: 4.5rem;
@@ -140,8 +165,76 @@ a {
     .nav-toggle {
         display: none;
     }
-
-    
 }
 
 
+/*
+===========
+Body
+==========
+*/
+
+section {
+   margin-left: 10rem;
+    margin-top: 3rem;
+    min-height: 95vh;
+}
+
+.hero {
+  position: relative;
+  top: 5rem;
+}
+
+.hero .text {
+  max-width: 50%; 
+}
+.hero h1 {
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+}
+.hero h2 {
+    font-size: 2rem;
+    color:  rgb(236, 204, 204);
+}
+
+.hero article p {
+  line-height: 1.6; 
+}
+
+.button-container button {
+    padding: 0.8rem 1.6rem;
+    border: none;
+    border: 0.1rem solid var(--mainBlack);
+    background-color: rgb(236, 204, 204);
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    color: #081B29;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3ms ease-in-out;
+}
+
+.let-talk {
+    margin-left: 2.5rem;
+}
+
+.button-container button:hover {
+    color: white;
+    background-color: #081B29;
+}
+.hero .img {
+  max-width: 40%; 
+  position: absolute;
+   right: 2rem;
+   top: 0;
+   bottom: 0;
+   display: flex;
+  
+}
+
+.hero .img img {
+  width: 100%; 
+  height: auto;
+
+ 
+}
