@@ -24,11 +24,11 @@ Global Styles
 ::before {
     margin: 0;
     padding: 0;
-    box-sizing: border box;
+    box-sizing: border-box;
 }
 
 body {
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Poppins', sans-serif;
     color:var(--mainBlack);
     background: var(--primaryColor);
     line-height: 1.5;
@@ -45,6 +45,8 @@ Nav Header
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
+        box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+
 
      position: fixed;
      top: 0;
@@ -58,10 +60,10 @@ Nav Header
 }
 
 .text-logo {
-    font-family: 'Poppins', serif;;
-    font-size: 3.6rem;
+    font-family: 'Poppins', serif;
     color: var(--greyBlack);
-    letter-spacing: var(--mainSpacing);
+    font-size: 2.8rem;
+    letter-spacing: 0.2rem;
 }
 
 .nav-bar {
@@ -84,7 +86,12 @@ Nav Header
      
 }
 
-a{
+.nav-toggle:hover i {
+    color: var(--primaryColor);
+    transform: scale(1.2);
+}
+
+a {
     text-decoration: none;
 }
 
@@ -99,15 +106,23 @@ a{
 .links {
     height: 0;
     overflow: hidden;
+    transition: var(--mainTransition);
     
 }
 
 .display-links {
     height: 16rem;
 }
+
 .social-media-icons {
    display: none;
 }
 
+@media (min-width: 76.8rem) {
+    .social-media-icons {
+        display: flex;
+        gap: 1rem;
+    }
+}
 
 
