@@ -1,3 +1,5 @@
+//NAVHEADER SECTION
+
 const navToggleElement = document.querySelector(".nav-toggle");
 console.log(navToggleElement); 
 
@@ -12,6 +14,7 @@ navToggleElement.addEventListener("click", function () {
 
 
 
+//HERO SECTION; TYPEWRITER EFFECT
 document.addEventListener('DOMContentLoaded', function() {
 const TypewriterElement = document.getElementById("h1-text");
 
@@ -28,3 +31,49 @@ const TypewriterElement = document.getElementById("h1-text");
 
   }
 });
+
+
+//ABOUT SECTION
+  // 1. Hide all content sections
+   // 2. Remove 'active-title' class from all titles
+   // 3. Show the content for the clicked title
+    // 4. Add underline to the clicked title
+
+    
+   function titleToggle(sectionId) {
+     const contents = document.querySelectorAll(".contents");
+     contents.forEach(function (content) {
+       content.classList.remove("active");
+       content.style.display = "none";
+     });
+
+  
+     const titles = document.querySelectorAll(".titles");
+     titles.forEach(function (title) {
+       title.classList.remove("active-title");
+     });
+
+     
+     const activeContent = document.getElementById(sectionId);
+     activeContent.classList.add("active");
+     activeContent.style.display = "block";
+
+
+     document.querySelector(`.title[onclick="titleToggle('${sectionId}')"]`)
+       .classList.add("active-title");
+   }
+
+
+        /*
+         const titles = document.querySelectorAll(".titles");
+         const contents = document.querySelectorAll(".contents");
+
+         function titleToggle(sectionId) {
+          for (title of titles) {
+            title.classList.remove('active-title')
+
+          }
+         }*/
+
+         
+

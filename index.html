@@ -104,16 +104,76 @@
               <h1 class="main-title">About me</h1>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam vitae iusto ratione architecto illo assumenda nihil, accusantium itaque eaque natus tempore vero tenetur animi. Quidem assumenda deleniti enim consectetur!</p>
 
-              <div class="sub-title">
-                  <p class="title" active-title>Skills</p>
-                  <p class="title">Education</p>
+              <div class="sub-titles">
+                  <p class="titles" onclick="titleToggle('skills')">Skills</p>
+                  <p class="titles" onclick="titleToggle('education')">Education</p>
+                  <p class="titles" onclick="titleToggle('certificates')">Certificates</p>
               </div>
+
+              <div class="contents" id="skills">
+                  <ul>
+                      <!-- Skills -->
+                      <li><span> Frontend Development</span><br>HTML, CSS, JavaScript, Responsive Design</li>
+                      <li><span>Web App Development</span><br>React.js, Sass, Bootstrap, API Integration</li>
+                      <li><span>Backend Development</span><br>Python, Java, MySQL</li>
+                      <li><span>Tools</span><br>VS Code, Intellij, Git, GitHub, Netlify</li>
+                      <li><span>Soft Skills</span><br>Problem-Solving, Team Collaboration, Time Management</li>
+                       <li><span>Microsoft Endpoint Management</span><br>Intune, Azure, Device Management</li>
+                  </ul>
+                </div>
+                  <!-- Education -->
+                <div class="contents" id="education" > 
+                  <ul>
+                      <li><span>Ongoing</span><br>Umschulung zur Fachinformatikerin (Anwendungsentwicklung), Germany</li>
+                      <li><span>Frontend Development</span><br>SheCodes Workshops (HTML, CSS, JavaScript)</li>
+                  </ul> 
+                </div>
+
+                      <!-- Certificates -->
+                   <div class="contents" id="certificates" >      
+                  <ul>
+                  <li><span>Python Essentials (PCAP-31-03)</span><br>Python Institute, Certified Associate in Python Programming</li>
+                  <li><span>Microsoft Endpoint Administrator</span><br>Intune and Azure</li>
+                  </ul>
+              </div>
+
             </div>
         </div>
       </div>
     </section>
 
 
+<!--------------------Projects--------->
+<section class="projects">
+  <div class="container">
+    <div class="my-project">
+    <div class="project-list">
+      <img src="/images/work-3.png">
+      <div class="layer">
+      <h3>Weather App</h3>
+      <p>This App helps you check the weather in real time, no matter the continent you live in</p>
+      <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+      </div>
+    </div>
+    <div class="project-list">
+      <img src="/images/work-2.png">
+      <div class="layer">
+      <h3>German Poem Generator App</h3>
+      <p>This App helps you check the weather in real time, no matter the continent you live in</p>
+      <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+      </div>
+    </div>
+    <div class="project-list">
+      <img src="/images/work-1.png">
+      <div class="layer">
+      <h3>Background App</h3>
+      <p>This App helps you check the weather in real time, no matter the continent you live in</p>
+      <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
 
 
     <script src="/index.js"></script>
