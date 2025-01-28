@@ -19,6 +19,8 @@ Global Styles
 =============
 */
 
+
+
 *,
 ::after,
 ::before {
@@ -117,15 +119,16 @@ a {
 
 .social-media-icons {
    display: none;
-   font-size: 2.5rem;
+   font-size: 2rem;
     padding: 0.5rem 1rem;
     color: var(--greyBlack);
     transition: color 0.3s ease;
-    
 }
-.social-media-icons: :hover {
+.social-media-icons:hover {
      color: var(--primaryColor);
 }
+
+    
 
 @media (max-width: 76.7rem) {
     .links, .social-media-icons {
@@ -151,11 +154,11 @@ a {
 @media (min-width: 76.8rem)  {
     .social-media-icons {
         display: flex;
-        justify-content: flex-start; 
+        justify-content: space-between; 
         margin-left: auto; 
-        margin-right: 2rem;  
-        font-size: 2rem;
-        gap: 1rem;  
+        margin-right: 0.7rem;  
+        font-size: 2rem;  
+
     }
 
     .links{
@@ -330,7 +333,6 @@ About
 Project
 ================
 */
-
 .projects {
     padding: 3rem 0;
 }
@@ -339,8 +341,15 @@ Project
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 4rem;
-    row-gap: 5rem;
+   
     margin: 1.5rem;
+    
+}
+
+h1.header {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 .project-list {
     position: relative;
@@ -354,10 +363,11 @@ Project
     display: block;
     overflow: hidden;
     transition: transform 0.5s;
+    
 }
 .layer {
     width: 100%;
-    height: 0
+    height: 0;  /* hides gradient on hover */
     background: linear-gradient(rgba(8, 27, 41, 0.5), rgb(236, 204, 204));
     border-radius: 1rem;
     position: absolute;
@@ -370,7 +380,12 @@ Project
     flex-direction: column;
     padding: 0 4rem;
     text-align: center;
-    font-size: 1.2rem
+    font-size: 1.2rem;
+    transition: height 0.5s;
+}
+
+.project-list:hover .layer {
+  height: 100%; /* Show gradient on hover */
 }
 
 .layer h3 {
@@ -397,10 +412,28 @@ a {
 .project-list img:hover {
     transform: scale(1.2);
 }
+.btn {
+    display: block;
+    margin: 3rem auto;
+    width: fit-content;
+    border: 0.1rem solid rgb(236, 204, 204);
+    padding: 1.2rem 2.4rem;
+    border-radius: 0.6rem;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.btn:hover {
+    border: 0.1rem solid rgba(8, 27, 41, 1);
+    background-color: rgb(236, 204, 204);
+    padding: 1.4rem 3rem;
+    border-radius: 0.6rem;
+    color: rgba(8, 27, 41, 1);
+}
 
-  
+
 @media (max-width: 76.8rem) {
- .layer h1 {
+ .layer h3 {
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
@@ -422,4 +455,4 @@ a {
    padding: 0.6rem;
     
   }
-  
+}
