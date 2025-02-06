@@ -12,25 +12,39 @@ navToggleElement.addEventListener("click", function () {
   //console.log("Toggle triggered!");
 });
 
+const careers = ["Ogechi Uzoma", "a Frontend Developer", "a Backend Developer", "a Full-Stack Developer"];
+
+const nameElement = document.querySelector(".h1-text-name");
+
+let careerIndex = 0;
+
+let characterIndex = 0;
+
+updateText();
+
+function updateText() {
+  characterIndex++;
+      nameElement.innerHTML = ` 
+        <h1>
+          Hi, I'm<span class="highlight"> ${careers[careerIndex].slice(0, characterIndex)}</span>
+        </h1>
+         `;
+         
+         if (characterIndex === careers[careerIndex].length) {
+            careerIndex++;
+            characterIndex = 0;
+         }
+
+         if (careerIndex === careers.length) {
+            careerIndex = 0;
+         }
+         setTimeout(updateText, 400);
+}
 
 
-//HERO SECTION; TYPEWRITER EFFECT
-document.addEventListener('DOMContentLoaded', function() {
-const TypewriterElement = document.getElementById("h1-text");
 
-  if (TypewriterElement) {
-    new Typewriter(TypewriterElement, {
-      strings: ["Hi, I'm Ogechi<span class='highlight'> Uzoma</span>"],
-      autoStart: true,
-      cursor: null,
-      delay: 120,
-      loop:false,
-    });
-  } else {
-        console.error('Element with id "h1-text" not found!');
 
-  }
-});
+
 
 
 //ABOUT SECTION

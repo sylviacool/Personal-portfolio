@@ -11,22 +11,23 @@
   </head>
   <body>
     <div class="nav-header">
-      <h1 class="text-logo">👩‍💻IamSylvia.</h1>
+      <h1 class="text-logo"><span>👩‍💻</span>IamSylvia.</h1>
 
      
         <!--links-->
+        
         <ul class="links">
           <li>
-            <a href="#" id="homeLink">Home</a>
+            <a href="#home" id="homeLink">Home</a>
           </li>
           <li>
-            <a href="about.html">About</a>
+            <a href="#about">About</a>
           </li>
           <li>
-            <a href="projects.html">Projects</a>
+            <a href="#projects">Projects</a>
           </li>
           <li>
-            <a href="ogechiuzoma.dev@gmail.com">Contact</a>
+            <a href="mailto:ogechiuzoma.dev@gmail.com">Contact</a>
           </li>
         </ul>
 
@@ -65,18 +66,19 @@
      <!--header-body-->
 
      
-<section class="hero">
+<section class="hero" id="home">
     <!-- Text Section -->
 <div class="text-img">
   <div class="text-button">
-        <h1 id="h1-text">
-          Hi, I'm Ogechi<span class="highlight"> Uzoma</span>
-         </h1>
+        <div class="h1-text-name">
+       
+         </div>
         <h2>Junior Software Developer</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi odit fugit sint
           omnis nesciunt consectetur facere odio, incidunt hic mollitia voluptate accusamus 
           quas beatae repellat non, sapiente ab ipsa deleniti.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab alias molestiae, exercitationem quos adipisci omnis animi consequatur vero totam! Et quidem tenetur quibusdam nam. Omnis aperiam sequi quia eos repellat!
         </p>
       <!-- Button Container -->
       <div class="button-container">
@@ -95,7 +97,7 @@
 
     <!--------------------About--------------------->
 
-    <section class="about">
+    <section class="about" id="about">
       <div class="container">
         <div class="row">
             <div class="about-col-1">
@@ -145,7 +147,7 @@
 
 
 <!--------------------Projects--------->
-<section class="projects">
+<section class="projects" id="projects">
   <div class="container">
     <h1 class="header">My Projects</h1>
   <div class="my-project">
@@ -180,7 +182,7 @@
 </section>
 
 <!-------------------Contact----------------------------->
-<section class="contact">
+<section class="contact" id="contact">
   <div class="contact-container">
     
       <!-- Left Side -->
@@ -188,7 +190,7 @@
         <h1 class="contact-title">Contact Me</h1>
         <p class="email"><i class="fa-solid fa-paper-plane"></i> ogechiuzoma.dev@gmail.com</p>
         <p class="number"><i class="fa-solid fa-phone"></i> +49 17646038336</p>
-        <a href="#" class="btn1-contact" download>Download CV</a>
+        <a href="/images/Lebenslauf-CV-Ogechi-Uzoma2.pdf" class="btn1-contact" download>Download CV</a>
       </div>
 
       <!-- Right Side -->
@@ -201,10 +203,18 @@
         </form>
       </div>
     </div>
+    
 </section>
 
-
-
+<!--------------footer--------------------------->
+  <footer>
+  <span>This Project was coded by </span>
+  <a href="https://github.com/sylviacool" target="_blank">Sylvia Uzoma</a>
+  <span> and is </span>
+  <a href="https://github.com/sylviacool/Personal-portfolio" target="_blank">open-sourced on Github</a>
+  <span> and is </span>
+  <a href="https://mycool-personal-portfolio.netlify.app" target="_blank">hosted on Netlify</a>.
+</footer>
 
     <script src="/index.js"></script>
   </body>
