@@ -1,16 +1,16 @@
 //NAVHEADER SECTION
 
-const navToggleElement = document.querySelector(".nav-toggle");
-console.log(navToggleElement); 
+document.addEventListener("DOMContentLoaded", function () {
+  const navToggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector(".nav-links");
 
-navToggleElement.addEventListener("click", function () {
-  const linksElement = document.querySelector(".links");
-  const mediaElement = document.querySelector('.social-media-icons');
-   //console.log(linksElement);
-  linksElement.classList.toggle("display-links");
-  mediaElement.classList.toggle('display-links');
-  //console.log("Toggle triggered!");
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", function () {
+      navLinks.classList.toggle("show");
+    });
+  }
 });
+
 
 const careers = ["Ogechi Uzoma", "a Frontend Developer", "a Backend Developer", "a Full-Stack Developer"];
 
