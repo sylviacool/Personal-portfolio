@@ -1,15 +1,12 @@
 //NAVHEADER SECTION
 
-document.addEventListener("DOMContentLoaded", function () {
-  const navToggle = document.querySelector(".nav-toggle");
-  const navLinks = document.querySelector(".nav-links");
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
 
-  if (navToggle && navLinks) {
-    navToggle.addEventListener("click", function () {
-      navLinks.classList.toggle("show");
-    });
-  }
+navToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
 });
+
 
 
 const careers = ["Ogechi Uzoma", "a Frontend Developer", "a Backend Developer", "a Full-Stack Developer"];
